@@ -1,0 +1,224 @@
+/*style de base */
+
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #151515;
+    color: #FFFFFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* Style du Header */
+.header {
+    display: flex;
+    justify-content: space-between;  /* Espace entre le logo et la navigation */
+    align-items: center;            /* Centrer verticalement les éléments */
+    padding: 20px 40px;
+    background-color: #151515;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #303030;
+}
+
+/* Style pour la barre de navigation au scroll */
+.navbar.scrolled {
+    background-color: #151515;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.logo {
+    font-size: 24px;
+    color: #B3995B;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #B3995B;
+}
+
+/* Style pour le menu burger */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 21px;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #B3995B;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #151515;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+/* Section Compétences */
+.skills-intro, .skills, .tools {
+    padding: 40px 20px;
+    background-color: #151515;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.skills-intro .section-title, 
+.skills .sub-title, 
+.tools .sub-title {
+    font-size: 28px;
+    color: #B3995B;
+    margin-bottom: 20px;
+}
+
+.skills-grid, .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.skill-logo, .tool-logo {
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-logo:hover, .tool-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: #303030;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+}
+
+.skill-logo p, .tool-logo p {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.section-title {
+    color: #B3995B;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.skills-section {
+    background-color: #303030;
+    padding: 40px 0;
+}
+
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-card {
+    background-color: #151515;
+    border: 1px solid #B3995B;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(25% - 40px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.skill-card h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.skill-card p {
+    font-size: 1em;
+    color: #B3995B;
+}
+
+
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #303030;
+    color: #B3995B;
+}

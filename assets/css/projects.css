@@ -1,0 +1,207 @@
+/*style de base */
+
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #151515;
+    color: #FFFFFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+/* Style du Header */
+.header {
+    display: flex;
+    justify-content: space-between;  /* Espace entre le logo et la navigation */
+    align-items: center;            /* Centrer verticalement les éléments */
+    padding: 20px 40px;
+    background-color: #151515;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+
+/* Navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #303030;
+}
+
+/* Style pour la barre de navigation au scroll */
+.navbar.scrolled {
+    background-color: #151515;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.logo {
+    font-size: 24px;
+    color: #B3995B;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #B3995B;
+}
+
+/* Style pour le menu burger */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 21px;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    background-color: #B3995B;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #151515;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+/* Global Styles */
+.projects-intro {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #151515;
+    color: #FFFFFF;
+}
+
+.projects-intro .section-title {
+    font-size: 36px;
+    color: #B3995B;
+    margin-bottom: 20px;
+}
+
+.projects {
+    padding: 40px 20px;
+    background-color: #303030;
+    color: #FFFFFF;
+}
+
+.projects .sub-title {
+    font-size: 28px;
+    color: #B3995B;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #151515;
+    border: 2px solid #B3995B;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.project-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.project-card h4 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.project-card .btn {
+    text-decoration: none;
+    background-color: #B3995B;
+    color: #151515;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.project-card .btn:hover {
+    background-color: #FFFFFF;
+    color: #151515;
+}
+
+
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #303030;
+    color: #B3995B;
+}

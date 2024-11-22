@@ -9,13 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Fonctionnalité : Afficher un message lorsqu'on clique sur le bouton
-const button = document.querySelector(".btn");
-if (button) {
-    button.addEventListener("click", () => {
-        alert("Vous allez découvrir mes projets !");
-    });
-}
+
 
 // Fonctionnalité : Ajout d'une classe au scroll pour un effet dynamique
 window.addEventListener("scroll", () => {

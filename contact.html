@@ -3,59 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez FLAHAUT Axel - Développeur web et mobile">
+    <title>Contact - FLAHAUT Axel</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <title> Contact - FLAHAUT Axel</title>
 </head>
 <body>
     <header class="navbar">
         <div class="container">
-            <h1 class="logo" >FLAHAUT Axel</h1>
+            <h1 class="logo">FLAHAUT Axel</h1>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="about.html">À propos</a></li>
                     <li><a href="projects.html">Projets</a></li>
-                    <li><a href="competences.html">Competences</a></li>
+                    <li><a href="competences.html">Compétences</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="burger" id="burger-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                    <span class="bar"></span>
                 </div>
             </nav>
-
         </div>
     </header>
 
-    <section class="contact">
+    <section class="contact-section">
         <div class="container">
             <h2>Contactez-moi</h2>
-            <p>Vous pouvez me contacter via LinkedIn, par mail, ou utiliser le formulaire ci-dessous </p>
-            <ul class="contact-info">
-                <li><a href="https://www.linkedin.com/in/axel-flahaut-103726235/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/axelinho75?tab=repositories" target="_blank">GitHub</a></li>
-                <li><a href="mailto:axel.flahaut@ecoles-epsi.net">axel.flahaut@ecoles-epsi.net</a></li>
-            </ul>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
+            <form action="send_mail.php" method="POST">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
         </div>
     </section>
     <script src="assets/js/main.js"></script>

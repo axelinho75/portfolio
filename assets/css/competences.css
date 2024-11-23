@@ -47,6 +47,8 @@ body {
     align-items: center;
     padding: 20px 0;
     background-color: #303030;
+    position: relative;
+    z-index: 1000; /* Assurez-vous que la navigation est au-dessus des autres éléments */
 }
 
 /* Style pour la barre de navigation au scroll */
@@ -108,6 +110,7 @@ body {
         top: 60px;
         left: 0;
         background-color: #151515;
+        z-index: 999; /* Assurez-vous que le menu est au-dessus des autres éléments */
     }
 
     .nav-links.active {
@@ -116,6 +119,30 @@ body {
 
     .nav-links li {
         margin: 15px 0;
+    }
+
+    .header {
+        padding: 10px 20px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .about {
+        padding: 40px 20px;
+    }
+
+    .about .section-title {
+        font-size: 28px;
+    }
+
+    .about-content {
+        font-size: 16px;
     }
 }
 
@@ -183,7 +210,7 @@ body {
 }
 
 .skills-section {
-    background-color: #303030;
+    background-color: #151515;
     padding: 40px 0;
 }
 
@@ -196,29 +223,103 @@ body {
 }
 
 .skill-card {
-    background-color: #151515;
+    background-color: #303030;
     border: 1px solid #B3995B;
     border-radius: 5px;
     padding: 20px;
-    width: calc(25% - 40px);
+    width: calc(50% - 40px); /* Deux cartes par ligne sur les écrans moyens */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
 }
 
 .skill-card h3 {
     margin-top: 0;
     font-size: 1.5em;
+    color: #B3995B;
 }
 
 .skill-card p {
     font-size: 1em;
-    color: #B3995B;
+    color: #FFFFFF;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-card {
+        width: 100%; /* Une carte par ligne sur les petits écrans */
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    .skill-card h3 {
+        font-size: 1.2em;
+    }
+
+    .skill-card p {
+        font-size: 0.9em;
+    }
+}
 
 .footer {
     padding: 20px 0;
     text-align: center;
     background-color: #303030;
     color: #B3995B;
+}
+
+.about {
+    padding: 60px 20px;
+    background-color: #151515;
+    text-align: center;
+}
+
+.about .section-title {
+    font-size: 36px;
+    color: #B3995B;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    position: relative;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills li {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #303030;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Responsive adjustments for skills */
+@media (max-width: 768px) {
+    .skills li {
+        width: 100%;
+        text-align: center;
+    }
 }

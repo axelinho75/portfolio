@@ -3,86 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de FLAHAUT Axel - Développeur web et mobile"">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href=""https://unpkg.com/aos@next/dist/aos.css""/>
+    <title>Axel Flahaut | Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <!-- GSAP pour les animations avancées -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo" >FLAHAUT Axel</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="parcours.html">Parcours Academique</a></li>
-                    <li><a href="veille.html">Veille</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="competences.html">Compétences</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="burger" id="burger-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+    <header class="site-header">
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">Axel Flahaut</a>
                 </div>
-            </nav>
-        </div>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="parcours.html">Parcours</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="veille.html">Veille</a>
+                    <a href="projects.html">Projets</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                
+            </div>
+        </nav>
     </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title" data-aos="fade-up">Bienvenue sur mon Portfolio</h1>
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                Développeur web et mobile, passionné par les technologies modernes.
-            </p>
-            <a href="projects.html" class="btn" data-aos="zoom-in" data-aos-delay="400">Voir mes projets</a>
+
+    <main>
+        <!-- Decoration shapes -->
+        <div class="decoration-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
-    </section>
-
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Mes services</h2>
-            <div class="service-card">
-                <div class="card" data-aos="flip-left">
-                    <h3>Développement WEB</h3>
-                    <p>Création de sites WEB modernes et performants</p>
+        
+        <!-- Hero Section with Parallax -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="profile-image">
+                    <div class="image-container">
+                        <img src="assets/images/axel.jpg" alt="Axel Flahaut">
+                    </div>
+                    <div class="image-glow"></div>
                 </div>
-
-                <div class="card" data-aos="flip-left" data-aos-delay="200">
-                    <h3>Développement Mobile</h3>
-                    <p>Création d'applications mobiles pour Android et iOS</p>
+                
+                <h1 class="hero-title animate-fade-up">FLAHAUT Axel</h1>
+                
+                <h2 class="hero-subtitle animate-fade-up" data-delay="200">Développeur Web & Mobile</h2>
+                
+                <div class="hero-description animate-fade-up" data-delay="400">
+                    <p>
+                        Bienvenue sur mon portfolio. Je suis étudiant en deuxième année à EPSI Paris La Défense, 
+                        passionné par le développement et les nouvelles technologies. Je vous invite à découvrir mes projets
+                        et mes compétences à travers ce site.
+                    </p>
                 </div>
-
-                <div class="card" data-aos="flip-left" data-aos-delay="400">
-                    <h3>Bases de données</h3>
-                    <p>Création et gestion de bases de données</p>
+                
+                <div class="hero-buttons animate-fade-up" data-delay="600">
+                    <a href="parcours.html" class="btn btn-primary">
+                        <span class="btn-text">À propos de moi</span>
+                        <span class="btn-bg"></span>
+                    </a>
+                    
+                    <a href="projects.html" class="btn btn-secondary">
+                        <span class="btn-text">Voir mes projets</span>
+                        <span class="btn-bg"></span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-text">Mes services</span>
+                    <span class="title-underline"></span>
+                </h2>
+                
+                <div class="services-grid">
+                    <div class="service-card animate-from-bottom" data-delay="0">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3>Développement Web</h3>
+                        <p>Création de sites et applications web modernes, interactifs et optimisés pour tous les appareils</p>
+                        <div class="service-highlight"></div>
+                    </div>
+                    
+                    <div class="service-card animate-from-bottom" data-delay="200">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3>Développement Mobile</h3>
+                        <p>Conception d'applications mobiles natives et multiplateformes pour Android et iOS</p>
+                        <div class="service-highlight"></div>
+                    </div>
+                    
+                    <div class="service-card animate-from-bottom" data-delay="400">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        <h3>Base de données</h3>
+                        <p>Conception et optimisation de bases de données relationnelles et NoSQL pour diverses applications</p>
+                        <div class="service-highlight"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Preview -->
+        <section id="skills-preview" class="skills-preview-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-text">Aperçu de mes compétences</span>
+                    <span class="title-underline"></span>
+                </h2>
+                
+                <div class="skills-container">
+                    <div class="skills-bg-skew"></div>
+                    <div class="skills-content">
+                        <div class="skills-grid">
+                            <div class="skill-item animate-scale-in" data-delay="0">
+                                <div class="skill-icon">
+                                    <img src="assets/images/skills/React.png" alt="React">
+                                </div>
+                                <span class="skill-name">React</span>
+                            </div>
+                            
+                            <div class="skill-item animate-scale-in" data-delay="100">
+                                <div class="skill-icon">
+                                    <img src="assets/images/skills/JS.png" alt="JavaScript">
+                                </div>
+                                <span class="skill-name">JavaScript</span>
+                            </div>
+                            
+                            <div class="skill-item animate-scale-in" data-delay="200">
+                                <div class="skill-icon">
+                                    <img src="assets/images/skills/Typescript.png" alt="TypeScript">
+                                </div>
+                                <span class="skill-name">TypeScript</span>
+                            </div>
+                            
+                            <div class="skill-item animate-scale-in" data-delay="300">
+                                <div class="skill-icon">
+                                    <img src="assets/images/skills/Python.png" alt="Python">
+                                </div>
+                                <span class="skill-name">Python</span>
+                            </div>
+                            
+                            <div class="skill-item animate-scale-in" data-delay="400">
+                                <div class="skill-icon">
+                                    <img src="assets/images/skills/HTML.png" alt="HTML/CSS">
+                                </div>
+                                <span class="skill-name">HTML/CSS</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-link">
+                            <a href="competences.html" class="link-with-arrow">
+                                Voir toutes mes compétences
+                                <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <h2 class="animate-fade-in">Intéressé par mon profil ?</h2>
+                
+                <p class="animate-fade-in" data-delay="200">
+                    Je suis ouvert aux opportunités professionnelles et collaborations sur des projets intéressants.
+                </p>
+                
+                <div class="cta-button animate-fade-in" data-delay="400">
+                    <a href="contact.html" class="btn btn-gradient">
+                        <span class="btn-text">Contactez-moi</span>
+                        <span class="btn-bg"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mobile Portfolio Access -->
+        
+    </main>
 
-    <footer class="footer">
+    <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 FLAHAUT AXEL. Tous droits réservés.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Axel Flahaut</span>
+                    <p>Développeur Web & Mobile</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-group">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="parcours.html">Parcours</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                            <li><a href="projects.html">Projets</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:axel.flahaut@ecoles-epsi.net">axel.flahaut@ecoles-epsi.net</a></li>
+                            <li><a href="https://www.linkedin.com/in/axel-flahaut-103726235/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/axelinho75" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Axel Flahaut. Tous droits réservés.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Visitor Journey Modal -->
+    <div id="visitor-journey-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <div class="modal-content">
+                <h2>Bienvenue ! Comment puis-je vous aider ?</h2>
+                
+                <div class="persona-buttons">
+                    <button class="persona-button" data-type="recruiter">
+                        <span class="icon">👔</span>
+                        <span class="title">Recruteur</span>
+                        <span class="description">Parcours et compétences</span>
+                    </button>
+                    
+                    <button class="persona-button" data-type="client">
+                        <span class="icon">💼</span>
+                        <span class="title">Client potentiel</span>
+                        <span class="description">Projets et services</span>
+                    </button>
+                    
+                    <button class="persona-button" data-type="student">
+                        <span class="icon">🎓</span>
+                        <span class="title">Étudiant</span>
+                        <span class="description">Formations et ressources</span>
+                    </button>
+                </div>
+                
+                <button id="explore-freely" class="text-button">
+                    Explorer librement
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        AOS.init(
-            {
-                duration: 1000,
-                once: true
-            }
-        );
-    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/visitor-journey.js"></script>
 </body>
 </html>

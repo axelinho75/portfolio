@@ -1,25 +1,38 @@
-// animation au chargement de la page 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.getElementById('burger-menu');
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-});
-
-
-
-// Fonctionnalité : Ajout d'une classe au scroll pour un effet dynamique
-window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-    if (navbar) {
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
+    
+    if (mobileMenuToggle) {
+      mobileMenuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('mobile-visible');
+      });
     }
-});
-
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (navLinks.classList.contains('mobile-visible') && 
+          !event.target.closest('.nav-links') && 
+          !event.target.closest('.mobile-menu-toggle')) {
+        navLinks.classList.remove('mobile-visible');
+      }
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  });

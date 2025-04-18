@@ -3,63 +3,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez FLAHAUT Axel - Développeur web et mobile">
+    <title>À propos de moi | Axel Flahaut</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/about.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <title> À propos - FLAHAUT Axel</title>
+    <!-- GSAP pour les animations avancées -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-
 <body>
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">FLAHAUT Axel</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="competences.html">Compétences</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="burger" id="burger-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+    <header class="site-header">
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">Axel Flahaut</a>
                 </div>
-            </nav>
-        </div>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="parcours.html">Parcours</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="veille.html">Veille</a>
+                    <a href="projects.html">Projets</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
     </header>
-    <section id="about" class="about">
+
+    <main>
+        <!-- Decoration shapes -->
+        <div class="decoration-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        
+        <!-- Hero Section with Parallax -->
+        <section id="about-hero" class="about-hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text animate-fade-in">
+                        <h1 class="hero-title">À propos de moi</h1>
+                        
+                        <p class="hero-subtitle">
+                            Étudiant passionné en développement informatique, spécialisé dans la création d'applications web et mobiles innovantes.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="contact.html" class="btn btn-primary">
+                                <span class="btn-text">Me contacter</span>
+                                <span class="btn-bg"></span>
+                            </a>
+                            
+                            <a href="parcours.html" class="btn btn-secondary">
+                                <span class="btn-text">Mon parcours</span>
+                                <span class="btn-bg"></span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image animate-scale-in">
+                        <div class="image-glow"></div>
+                        <div class="profile-image">
+                            <img src="assets/images/axel.jpg" alt="Axel Flahaut">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- My Story Section -->
+        <section id="my-story" class="my-story-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-text">Mon parcours</span>
+                    <span class="title-underline"></span>
+                </h2>
+                
+                <div class="timeline">
+                    <div class="timeline-event" data-delay="0">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="event-header">
+                                <h3>Stage chez Ipharm</h3>
+                                <span class="event-date">2025</span>
+                            </div>
+                            <p>Développement d'une applications web back-office</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-event" data-delay="100">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="event-header">
+                                <h3>Étudiant en 2ème année à EPSI Paris La Défense</h3>
+                                <span class="event-date">2023 - Présent</span>
+                            </div>
+                            <p>Formation approfondie en développement web et mobile, apprentissage des frameworks modernes et méthodologies agiles.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-event" data-delay="200">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="event-header">
+                                <h3>Stage chez Ariane-Group</h3>
+                                <span class="event-date">2024</span>
+                            </div>
+                            <p>Devellopement d'une base de données ainsi que l'application associée.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-event" data-delay="300">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="event-header">
+                                <h3>Première année EPSI</h3>
+                                <span class="event-date">2022 - 2023</span>
+                            </div>
+                            <p>Apprentissage des fondamentaux du développement informatique et des technologies web.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Me Details -->
+        <section id="about-details" class="about-details-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text animate-from-left">
+                        <h2>Qui suis-je ?</h2>
+                        
+                        <div class="about-paragraphs">
+                            <p>
+                                Je m'appelle Axel Flahaut, j'ai 21 ans et je suis passionné par le monde de l'informatique depuis mon plus jeune âge. Actuellement étudiant en développement à EPSI Paris La Défense, je me spécialise dans la création d'applications web et mobiles.
+                            </p>
+                            <p>
+                                Mon parcours m'a permis d'acquérir des compétences solides en programmation, notamment en JavaScript, TypeScript, React et PHP. Je m'intéresse particulièrement à la création d'interfaces utilisateur intuitives et à l'optimisation des performances.
+                            </p>
+                            <p>
+                                En dehors de mes études, je continue à me former en autodidacte sur les nouvelles technologies et les bonnes pratiques de développement. J'aime relever des défis techniques et trouver des solutions innovantes aux problèmes.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cards animate-from-right">
+                        <div class="about-card" data-delay="0">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3>Objectifs</h3>
+                            <p>Devenir un développeur fullstack maîtrisant les technologies front-end et back-end modernes.</p>
+                        </div>
+                        
+                        <div class="about-card" data-delay="100">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                                </svg>
+                            </div>
+                            <h3>Formation</h3>
+                            <p>En cours de Bachelor Informatique, spécialisation développement web et mobile.</p>
+                        </div>
+                        
+                        <div class="about-card" data-delay="200">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3>Expérience</h3>
+                            <p>Projets académiques et professionnels, stages en entreprise dans le développement web.</p>
+                        </div>
+                        
+                        <div class="about-card" data-delay="300">
+                            <div class="card-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3>Qualités</h3>
+                            <p>Autodidacte, rigoureux, esprit d'équipe et capacité d'adaptation à de nouveaux environnements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interests & Hobbies -->
+        <section id="interests" class="interests-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-text">Centres d'intérêt</span>
+                    <span class="title-underline"></span>
+                </h2>
+                
+                <div class="interests-grid">
+                    <div class="interest-card" data-delay="0">
+                        <div class="interest-header">
+                            <div class="interest-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <h3>Technologies</h3>
+                        </div>
+                        
+                        <ul class="interest-list">
+                            <li class="interest-item" data-delay="100">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Développement web
+                            </li>
+                            <li class="interest-item" data-delay="200">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Applications mobiles
+                            </li>
+                            <li class="interest-item" data-delay="300">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Intelligence artificielle
+                            </li>
+                            <li class="interest-item" data-delay="400">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Réalité virtuelle
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="interest-card" data-delay="100">
+                        <div class="interest-header">
+                            <div class="interest-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3>Loisirs</h3>
+                        </div>
+                        
+                        <ul class="interest-list">
+                            <li class="interest-item" data-delay="100">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Jeux vidéo
+                            </li>
+                            <li class="interest-item" data-delay="200">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Musique
+                            </li>
+                            <li class="interest-item" data-delay="300">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Cinéma
+                            </li>
+                            <li class="interest-item" data-delay="400">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Sport
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="interest-card" data-delay="200">
+                        <div class="interest-header">
+                            <div class="interest-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                </svg>
+                            </div>
+                            <h3>Apprentissage</h3>
+                        </div>
+                        
+                        <ul class="interest-list">
+                            <li class="interest-item" data-delay="100">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Nouveaux langages
+                            </li>
+                            <li class="interest-item" data-delay="200">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Frameworks émergents
+                            </li>
+                            <li class="interest-item" data-delay="300">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Cybersécurité
+                            </li>
+                            <li class="interest-item" data-delay="400">
+                                <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                                Design UX/UI
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <h2 class="animate-fade-in">Envie de travailler ensemble ?</h2>
+                
+                <p class="animate-fade-in" data-delay="200">
+                    N'hésitez pas à me contacter pour discuter de votre projet ou pour toute opportunité professionnelle.
+                </p>
+                
+                <div class="cta-button animate-fade-in" data-delay="400">
+                    <a href="contact.html" class="btn btn-gradient">
+                        <span class="btn-text">Contactez-moi</span>
+                        <span class="btn-bg"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
-            <div class="about-content">
-                <img src="assets/images/axel.jpg" alt="Photo de profil" class="profile-pic">
-                <p>
-                    Je m'appelle <strong>Axel Flahaut</strong>, étudiant en deuxième année à 
-                    <strong>EPSI Paris La Défense</strong>, passionné par le développement web, mobile, et la sécurité informatique. 
-                    Mon objectif est de transformer des idées en projets concrets grâce à mes compétences techniques et ma créativité.
-                </p>
-                <p>
-                    Voici quelques compétences que j'ai acquises au fil de mon parcours :
-                </p>
-                <ul class="skills">
-                    <li>Développement d'applications web et mobiles</li>
-                    <li>Gestion de bases de données</li>
-                    <li>Initiation aux réseaux</li>
-                    <li>Création de projets collaboratifs avec Git et GitHub</li>
-                </ul>
-                <p>
-                    Je suis toujours prêt à relever de nouveaux défis et à apprendre de nouvelles technologies pour évoluer dans ce domaine en constante mutation.
-                </p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Axel Flahaut</span>
+                    <p>Développeur Web & Mobile</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-group">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="parcours.html">Parcours</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                            <li><a href="projects.html">Projets</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:axel.flahaut@ecoles-epsi.net">axel.flahaut@ecoles-epsi.net</a></li>
+                            <li><a href="https://www.linkedin.com/in/axel-flahaut-103726235/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/axelinho75" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Axel Flahaut. Tous droits réservés.</p>
             </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <p>© 2024 Mon Portfolio. Tous droits réservés.</p>
     </footer>
 
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/about.js"></script>
 </body>
 </html>

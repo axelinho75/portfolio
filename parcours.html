@@ -3,113 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de FLAHAUT Axel - Développeur web et mobile"">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href=""https://unpkg.com/aos@next/dist/aos.css""/>
+    <title>Mon Parcours | Axel Flahaut</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/parcours.css">
+    <!-- GSAP pour les animations avancées -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo" >FLAHAUT Axel</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="parcours.html">Parcours Academique</a></li>
-                    <li><a href="veille.html">Veille</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="competences.html">Compétences</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="burger" id="burger-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+    <header class="site-header">
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">Axel Flahaut</a>
                 </div>
-            </nav>
-        </div>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="parcours.html">Parcours</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="veille.html">Veille</a>
+                    <a href="projects.html">Projets</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
     </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h1 class="hero-title
-            " data-aos="fade-up">Mon Parcours Académique</h1>
-            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
-                Découvrez mon parcours académique et mes différentes formations.
-            </p>
-        </div>
-    </section>
 
-    <div class="timeline-item" data-aos="fade-up">
-        <div class="timeline-date">2023 - Présent</div>
-        <div class="timeline-content">
-            <h3>BTS SIO SLAM</h3>
-            <p>Lycée Saint Vincent, Senlis</p>
-            <p>Formation en développement d'applications et services informatiques avec spécialisation en programmation.</p>
+    <main>
+        <!-- Decoration shapes -->
+        <div class="decoration-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
         </div>
-    </div>
-    <div class="timeline-item" data-aos="fade-up">
-        <div class="timeline-date">2023 - Présent</div>
-        <div class="timeline-content">
-            <h3>BTS SIO SLAM</h3>
-            <p>Lycée Saint Vincent, Senlis</p>
-            <p>Formation en développement d'applications et services informatiques avec spécialisation en programmation.</p>
-        </div>
-    </div>
-    <div class="timeline-item" data-aos="fade-up">
-        <div class="timeline-date">2023 - Présent</div>
-        <div class="timeline-content">
-            <h3>BTS SIO SLAM</h3>
-            <p>Lycée Saint Vincent, Senlis</p>
-            <p>Formation en développement d'applications et services informatiques avec spécialisation en programmation.</p>
-        </div>
-    </div>
-    <div class="timeline-item" data-aos="fade-up">
-        <div class="timeline-date">2023 - Présent</div>
-        <div class="timeline-content">
-            <h3>BTS SIO SLAM</h3>
-            <p>Lycée Saint Vincent, Senlis</p>
-            <p>Formation en développement d'applications et services informatiques avec spécialisation en programmation.</p>
-        </div>
-    </div>
-    <div class="timeline-item" data-aos="fade-up">
-        <div class="timeline-date">2023 - Présent</div>
-        <div class="timeline-content">
-            <h3>BTS SIO SLAM</h3>
-            <p>Lycée Saint Vincent, Senlis</p>
-            <p>Formation en développement d'applications et services informatiques avec spécialisation en programmation.</p>
-        </div>
-    </div>
-    <div class="timeline-item" data-aos="fade-up">
-        <div class="timeline-date">2023 - Présent</div>
-        <div class="timeline-content">
-            <h3>BTS SIO SLAM</h3>
-            <p>Lycée Saint Vincent, Senlis</p>
-            <p>Formation en développement d'applications et services informatiques avec spécialisation en programmation.</p>
-        </div>
-    </div>
+        
+        <!-- Hero Section with Parallax -->
+        <section id="parcours-hero" class="parcours-hero-section">
+            <div class="container hero-container">
+                <h1 class="hero-title animate-fade-up">Mon Parcours</h1>
+                
+                <p class="hero-subtitle animate-fade-up" data-delay="200">
+                    Découvrez mon cheminement académique, mes formations et les compétences que j'ai développées au fil de mes études.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Tabs Section -->
+        <section id="tabs-section" class="tabs-section">
+            <div class="container">
+                <div class="tabs-container">
+                    <div class="tabs-wrapper animate-fade-up" data-delay="300">
+                        <div class="tabs-highlight"></div>
+                        
+                        <button id="tab-education" class="tab-button active" data-tab="education">
+                            <span class="tab-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 0.25l7.5 3v7.5l-7.5 3-7.5-3v-7.5l7.5-3zM1.5 3.72v5.56l6 2.4v-5.56l-6-2.4zM8 1.37l-5.97 2.39 5.97 2.39 5.97-2.39-5.97-2.39zM14.5 3.72l-6 2.4v5.56l6-2.4v-5.56z"/>
+                                </svg>
+                            </span>
+                            <span class="tab-label">Formation</span>
+                        </button>
+                        
+                        
+                    </div>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="tab-content-container">
+                    <!-- Education Timeline -->
+                    <div id="content-education" class="tab-content active">
+                        <div class="education-timeline">
+                            <!-- Timeline vertical line -->
+                            <div class="timeline-line"></div>
+                            
+                            <!-- Education Item 1 -->
+                            <div class="education-item item-right animate-from-side" data-delay="0">
+                                <div class="date-bubble">
+                                    <span>2022-2027</span>
+                                </div>
+                                
+                                <div class="education-card">
+                                    <div class="education-header">
+                                        <div class="institution-logo">
+                                            <img src="assets/images/logos/epsi.png" alt="EPSI Paris La Défense">
+                                        </div>
+                                        <div class="education-title">
+                                            <h3>Bachelor Concepteur Développeur d'Applications</h3>
+                                            <p class="institution-name">EPSI Paris La Défense</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="education-description">
+                                        Formation approfondie en développement web et mobile, architectures logicielles, et méthodes agiles.
+                                    </p>
+                                    
+                                    <div class="skills-list">
+                                        <span class="skill-tag">React</span>
+                                        <span class="skill-tag">Node.js</span>
+                                        <span class="skill-tag">Java</span>
+                                        <span class="skill-tag">DevOps</span>
+                                        <span class="skill-tag">Agilité</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Education Item 2 -->
+                            <div class="education-item item-left animate-from-side" data-delay="200">
+                                <div class="date-bubble">
+                                    <span>2022-2025</span>
+                                </div>
+                                
+                                <div class="education-card">
+                                    <div class="education-header">
+                                        <div class="institution-logo">
+                                            <img src="assets/images/logos/epsi.png" alt="Lycée XYZ">
+                                        </div>
+                                        <div class="education-title">
+                                            <h3>BTS SIO option SISR</h3>
+                                            <p class="institution-name">Ecole EPSI</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="education-description">
+                                        Formation aux services informatiques aux organisations avec spécialisation en développement d'applications.
+                                    </p>
+                                    
+                                    <div class="skills-list">
+                                        <span class="skill-tag">PHP</span>
+                                        <span class="skill-tag">SQL</span>
+                                        <span class="skill-tag">JavaScript</span>
+                                        <span class="skill-tag">Conception</span>
+                                        <span class="skill-tag">Analyse</span>
+                                    </div>
+                                </div>
+                            </div>
 
-    <footer class="footer">
+                            <!-- Education Item 2 -->
+                            <div class="education-item item-right animate-from-side" data-delay="200">
+                                <div class="date-bubble">
+                                    <span>2020-2022</span>
+                                </div>
+                                
+                                <div class="education-card">
+                                    <div class="education-header">
+                                        <div class="institution-logo">
+                                            <img src="assets/images/logos/licence.png" alt="Lycée XYZ">
+                                        </div>
+                                        <div class="education-title">
+                                            <h3>Licence De Physique</h3>
+                                            <p class="institution-name">Université des Sciences de Caen</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="education-description">
+                                        Licences de Physique option LAS 
+                                    </p>
+                                    
+                                    <div class="skills-list">
+                                        <span class="skill-tag">Chimie</span>
+                                        <span class="skill-tag">Maths</span>
+                                        <span class="skill-tag">Thermo-dynamique</span>
+                                        <span class="skill-tag">Analyse</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- Education Item 3 -->
+                            <div class="education-item item-left animate-from-side" data-delay="400">
+                                <div class="date-bubble">
+                                    <span> 2016-2020</span>
+                                </div>
+                                
+                                <div class="education-card">
+                                    <div class="education-header">
+                                        <div class="institution-logo">
+                                            <img src="assets/images/logos/bac.png" alt="Lycée Camille Sée">
+                                        </div>
+                                        <div class="education-title">
+                                            <h3>Baccalauréat Général</h3>
+                                            <p class="institution-name">Lycée Camille Sée</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="education-description">
+                                        Spécialités Mathématiques et Physique-Chimie.
+                                    </p>
+                                    
+                                    <div class="skills-list">
+                                        <span class="skill-tag">Mathématique</span>
+                                        <span class="skill-tag">SVT</span>
+                                        <span class="skill-tag">Physique</span>
+                                        <span class="skill-tag">Chimie</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Academic Projects -->
+                    <div id="content-projects" class="tab-content">
+                        <div class="academic-projects">
+                            <!-- Project 1 -->
+                            <div class="project-card animate-from-bottom" data-delay="0">
+                                <div class="project-number">
+                                    <span>1</span>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>Application de gestion de tâches</h3>
+                                        <span class="project-meta">Développement Web Avancé • 2023</span>
+                                    </div>
+                                    
+                                    <p class="project-description">
+                                        Conception et développement d'une application complète de gestion de tâches avec React et Firebase.
+                                    </p>
+                                    
+                                    <div class="tech-list">
+                                        <span class="tech-tag">React</span>
+                                        <span class="tech-tag">Firebase</span>
+                                        <span class="tech-tag">CSS Grid</span>
+                                        <span class="tech-tag">Git</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-decoration"></div>
+                            </div>
+                            
+                            <!-- Project 2 -->
+                            <div class="project-card animate-from-bottom" data-delay="200">
+                                <div class="project-number">
+                                    <span>2</span>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>Système de réservation</h3>
+                                        <span class="project-meta">Architecture Logicielle • 2022</span>
+                                    </div>
+                                    
+                                    <p class="project-description">
+                                        Création d'un système de réservation avec une architecture microservices.
+                                    </p>
+                                    
+                                    <div class="tech-list">
+                                        <span class="tech-tag">Spring Boot</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">Docker</span>
+                                        <span class="tech-tag">API REST</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-decoration"></div>
+                            </div>
+                            
+                            <!-- Project 3 -->
+                            <div class="project-card animate-from-bottom" data-delay="400">
+                                <div class="project-number">
+                                    <span>3</span>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <h3>Analyse de données météorologiques</h3>
+                                        <span class="project-meta">Intelligence Artificielle • 2022</span>
+                                    </div>
+                                    
+                                    <p class="project-description">
+                                        Projet d'analyse et de prédiction de données météorologiques avec algorithmes d'apprentissage automatique.
+                                    </p>
+                                    
+                                    <div class="tech-list">
+                                        <span class="tech-tag">Python</span>
+                                        <span class="tech-tag">Pandas</span>
+                                        <span class="tech-tag">Scikit-learn</span>
+                                        <span class="tech-tag">Matplotlib</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-decoration"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section gradient-bg">
+            <div class="container">
+                <h2 class="animate-fade-in">Prêt à collaborer ensemble ?</h2>
+                
+                <p class="animate-fade-in" data-delay="200">
+                    Intéressé par mon parcours ? N'hésitez pas à me contacter pour discuter de vos projets ou opportunités.
+                </p>
+                
+                <div class="cta-buttons animate-fade-in" data-delay="400">
+                    <a href="contact.html" class="btn btn-gradient">
+                        <span class="btn-text">Contactez-moi</span>
+                        <span class="btn-bg"></span>
+                    </a>
+                    
+                    <a href="projects.html" class="btn btn-secondary">
+                        <span class="btn-text">Voir mes projets</span>
+                        <span class="btn-bg"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 FLAHAUT AXEL. Tous droits réservés.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Axel Flahaut</span>
+                    <p>Développeur Web & Mobile</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-group">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="parcours.html">Parcours</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                            <li><a href="projects.html">Projets</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:axel.flahaut@ecoles-epsi.net">axel.flahaut@ecoles-epsi.net</a></li>
+                            <li><a href="https://www.linkedin.com/in/axel-flahaut-103726235/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/axelinho75" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Axel Flahaut. Tous droits réservés.</p>
+            </div>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
-
-    <script>
-        AOS.init(
-            {
-                duration: 1000,
-                once: true
-            }
-        );
-    </script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/parcours.js"></script>
 </body>
 </html>

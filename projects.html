@@ -3,124 +3,537 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez FLAHAUT Axel - Développeur web et mobile">
+    <title>Mes Projets | Axel Flahaut</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/projects.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-    <title>À propos - FLAHAUT Axel</title>
+    <!-- GSAP pour les animations avancées -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-
 <body>
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">FLAHAUT Axel</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="about.html">À propos</a></li>
-                    <li><a href="projects.html">Projets</a></li>
-                    <li><a href="competences.html">Compétences</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="burger" id="burger-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-    
-    <main>
-        <!-- Introduction -->
-        <section class="projects-intro">
+    <header class="site-header">
+        <nav>
             <div class="container">
-                <h2 class="section-title">Mes Projets</h2>
-                <p>
-                    Découvrez mes projets réalisés dans le cadre de mes études et de mes stages. Chaque projet illustre mes compétences en développement web, mobile, et autres domaines techniques.
+                <div class="logo">
+                    <a href="index.html">Axel Flahaut</a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="parcours.html">Parcours</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="projects.html" class="active">Projets</a>
+                    <a href="veille.html">Veille</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Decoration shapes -->
+        <div class="decoration-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        
+        <!-- Hero Section with Parallax -->
+        <section id="projects-hero" class="projects-hero-section">
+            <div class="container hero-container">
+                <h1 class="hero-title animate-fade-up">Mes Projets</h1>
+                
+                <p class="hero-subtitle animate-fade-up" data-delay="200">
+                    Découvrez mes projets réalisés dans le cadre de mes études et de mes stages. 
+                    Chaque projet illustre mes compétences en développement web, mobile, et autres domaines techniques.
                 </p>
             </div>
         </section>
-
-        <!-- Projets Scolaires -->
-        <section id="school-projects" class="projects">
+        
+        <!-- Filters -->
+        <section id="filters" class="filters-section">
             <div class="container">
-                <h3 class="sub-title">Projets Scolaires</h3>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <img src="assets/images/smartbike.png"  class="project-img">
-                        <h4>Projet 1 - Site Web</h4>
-                        <p>creation d'un site Web marchant</p>
-                        <p><strong>Technologies :</strong> PHP, HTML/CSS, SQL</p>
-                        <a href="https://github.com/axelinho75/smart-bike" target="_blank" class="btn" >Voir plus</a>
-                    </div>
-                    <div class="project-card">
-                        <img src="projet-scolaire2.jpg" alt="Projet 2" class="project-img">
-                        <h4>Projet 2 - SNT-Labo</h4>
-                        <p>Devellopement d'une application python avec  interface graphique pour gerer les connexion d'un laboratoire</p>
-                        <p><strong>Technologies :</strong>Python</p>
-                        <a href="https://github.com/axelinho75/portail-app" target="_blank" class="btn" >Voir plus</a>
-
-                    </div>
-                    <div class="project-card">
-                        <img src="assets/images/ClubFinder.png" alt="Projet 2" class="project-img">
-                        <h4>Projet 3 - ClubFinder</h4>
-                        <p>Creation d'une application Mobile pour la recherche de boite de nuit</p>
-                        <p><strong>Technologies :</strong> React-Native, TypeScript</p>
-                        <a href="https://github.com/axelinho75/Club-Finder" target="_blank" class="btn" >Voir plus</a>
-
-                    </div>
-                    <div class="project-card">
-                        <img src="assets/images/twitch.png"  class="project-img">
-                        <h4>Projet 4 - BDD Twitch</h4>
-                        <p>conception de la base de données de Twitch</p>
-                        <p><strong>Technologies :</strong>SQL</p>
-                        <a href="https://github.com/axelinho75/BDD-Twitch" target="_blank" class="btn" >Voir plus</a>
-
-                    </div>
-                    <div class="project-card">
-                        <img src="assets/images/PNJ2.png"  class="project-img">
-                        <h4>Projet 5 - Student-Life </h4>
-                        <p>Creation d'un jeu pour presenter l'ecole</p>
-                        <p><strong>Technologies :</strong> Unity 3D, C#</p>
-                        <a href="https://github.com/axelinho75/epsi-game" target="_blank" class="btn" >Voir plus</a>
-
-                    </div>
+                <div class="filters-container animate-fade-up" data-delay="300">
+                    <button class="filter-button active" data-filter="all">
+                        <span class="filter-icon active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="filter-icon inactive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="filter-label">Tous les projets</span>
+                    </button>
                     
+                    <button class="filter-button" data-filter="school">
+                        <span class="filter-icon active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="filter-icon inactive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="filter-label">Projets Scolaires</span>
+                    </button>
+                    
+                    <button class="filter-button" data-filter="internship">
+                        <span class="filter-icon active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="filter-icon inactive">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </span>
+                        <span class="filter-label">Projets de Stage</span>
+                    </button>
                 </div>
-                
             </div>
         </section>
-
-        <!-- Projets de Stage -->
-        <section id="internship-projects" class="projects">
+        
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
             <div class="container">
-                <h3 class="sub-title">Projets de Stage</h3>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <img src="assets/images/arianegroup.png" class="project-img"> 
-                        <h4>Stage - Creation d'une base de données</h4>
-                        <p>Conception d'une base de données et d'un interface graphique pour gerer les inserts et affichage des tables</p>
-                        <p><strong>Technologies :</strong> SQL, Python</p>
-                    </div>
-                    <div class="project-card">
-                        <img src="assets/images/ipharm_1.png" class="project-img"> 
-                        <h4>Stage - Creation d'une base de données et d'un logiciel de Gestion</h4>
-                        <p>Creation d'une base de données et d'un logiciel de gestion de pharmacie</p>
-                        <p><strong>Technologies :</strong> HTML, CSS, Javascript </p>
+                <div class="projects-container">
+                    <!-- School Projects -->
+                    <div class="project-category school-projects" data-category="school">
+                        <div class="category-header animate-fade-in">
+                            <div class="header-title">
+                                <span class="category-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </span>
+                                <h2>Projets Scolaires</h2>
+                            </div>
+                            <div class="header-line"></div>
+                        </div>
+                        
+                        <div class="projects-grid">
+                            <!-- Project 1 -->
+                            <div class="project-card" data-delay="0">
+                                <div class="project-image">
+                                    <img src="assets/images/projects/smartbike.png" alt="Projet 1 - Site Web">
+                                    
+                                    <!-- Overlay with info -->
+                                    <div class="image-overlay">
+                                        <h3 class="overlay-title">Projet 1 - Site Web</h3>
+                                        <div class="overlay-technologies">
+                                            <span class="tech-tag">PHP</span>
+                                            <span class="tech-tag">HTML/CSS</span>
+                                            <span class="tech-tag">SQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Projet 1 - Site Web</h3>
+                                    
+                                    <div class="project-divider"></div>
+                                    
+                                    <p class="project-description">
+                                        Création d'un site Web marchand avec système de panier et gestion des utilisateurs
+                                    </p>
+                                    
+                                    <div class="project-technologies">
+                                        <span class="technology">PHP</span>
+                                        <span class="technology">HTML/CSS</span>
+                                        <span class="technology">SQL</span>
+                                    </div>
+                                    
+                                    <div class="project-action">
+                                        <a href="https://github.com/axelinho75/smart-bike" target="_blank" rel="noopener noreferrer" class="github-link">
+                                            <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                            </svg>
+                                            Voir sur GitHub
+                                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="corner-decoration"></div>
+                            </div>
+                            
+                            <!-- Project 2 -->
+                            <div class="project-card" data-delay="100">
+                                <div class="project-image">
+                                    <img src="assets/images/projects/projet-scolaire2.jpg" alt="Projet 2 - SNT-Labo">
+                                    
+                                    <!-- Overlay with info -->
+                                    <div class="image-overlay">
+                                        <h3 class="overlay-title">Projet 2 - SNT-Labo</h3>
+                                        <div class="overlay-technologies">
+                                            <span class="tech-tag">Python</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Projet 2 - SNT-Labo</h3>
+                                    
+                                    <div class="project-divider"></div>
+                                    
+                                    <p class="project-description">
+                                        Développement d'une application Python avec interface graphique pour gérer les connexions d'un laboratoire
+                                    </p>
+                                    
+                                    <div class="project-technologies">
+                                        <span class="technology">Python</span>
+                                    </div>
+                                    
+                                    <div class="project-action">
+                                        <a href="https://github.com/axelinho75/portail-app" target="_blank" rel="noopener noreferrer" class="github-link">
+                                            <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                            </svg>
+                                            Voir sur GitHub
+                                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="corner-decoration"></div>
+                            </div>
+                            
+                            <!-- Project 3 -->
+                            <div class="project-card" data-delay="200">
+                                <div class="project-image">
+                                    <img src="assets/images/projects/clubfinder.png" alt="Projet 3 - ClubFinder">
+                                    
+                                    <!-- Overlay with info -->
+                                    <div class="image-overlay">
+                                        <h3 class="overlay-title">Projet 3 - ClubFinder</h3>
+                                        <div class="overlay-technologies">
+                                            <span class="tech-tag">React-Native</span>
+                                            <span class="tech-tag">TypeScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Projet 3 - ClubFinder</h3>
+                                    
+                                    <div class="project-divider"></div>
+                                    
+                                    <p class="project-description">
+                                        Création d'une application Mobile pour la recherche de boîtes de nuit avec système de géolocalisation
+                                    </p>
+                                    
+                                    <div class="project-technologies">
+                                        <span class="technology">React-Native</span>
+                                        <span class="technology">TypeScript</span>
+                                    </div>
+                                    
+                                    <div class="project-action">
+                                        <a href="https://github.com/axelinho75/Club-Finder" target="_blank" rel="noopener noreferrer" class="github-link">
+                                            <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                            </svg>
+                                            Voir sur GitHub
+                                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="corner-decoration"></div>
+                            </div>
+                            
+                            <!-- Project 4 -->
+                            <div class="project-card" data-delay="300">
+                                <div class="project-image">
+                                    <img src="assets/images/projects/twitch.png" alt="Projet 4 - BDD Twitch">
+                                    
+                                    <!-- Overlay with info -->
+                                    <div class="image-overlay">
+                                        <h3 class="overlay-title">Projet 4 - BDD Twitch</h3>
+                                        <div class="overlay-technologies">
+                                            <span class="tech-tag">SQL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Projet 4 - BDD Twitch</h3>
+                                    
+                                    <div class="project-divider"></div>
+                                    
+                                    <p class="project-description">
+                                        Conception de la base de données de Twitch avec modélisation complète et requêtes optimisées
+                                    </p>
+                                    
+                                    <div class="project-technologies">
+                                        <span class="technology">SQL</span>
+                                    </div>
+                                    
+                                    <div class="project-action">
+                                        <a href="https://github.com/axelinho75/BDD-Twitch" target="_blank" rel="noopener noreferrer" class="github-link">
+                                            <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                            </svg>
+                                            Voir sur GitHub
+                                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="corner-decoration"></div>
+                            </div>
+                            
+                            <!-- Project 5 -->
+                            <div class="project-card" data-delay="400">
+                                <div class="project-image">
+                                    <img src="assets/images/projects/pnj2.png" alt="Projet 5 - Student-Life">
+                                    
+                                    <!-- Overlay with info -->
+                                    <div class="image-overlay">
+                                        <h3 class="overlay-title">Projet 5 - Student-Life</h3>
+                                        <div class="overlay-technologies">
+                                            <span class="tech-tag">Unity 3D</span>
+                                            <span class="tech-tag">C#</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Projet 5 - Student-Life</h3>
+                                    
+                                    <div class="project-divider"></div>
+                                    
+                                    <p class="project-description">
+                                        Création d'un jeu pour présenter l'école avec personnages interactifs et environnement 3D
+                                    </p>
+                                    
+                                    <div class="project-technologies">
+                                        <span class="technology">Unity 3D</span>
+                                        <span class="technology">C#</span>
+                                    </div>
+                                    
+                                    <div class="project-action">
+                                        <a href="https://github.com/axelinho75/epsi-game" target="_blank" rel="noopener noreferrer" class="github-link">
+                                            <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                            </svg>
+                                            Voir sur GitHub
+                                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="corner-decoration"></div>
+                            </div>
+                        </div>
                     </div>
                     
+                    <!-- Internship Projects -->
+                    <div class="project-category internship-projects" data-category="internship">
+                        <div class="category-header animate-fade-in">
+                            <div class="header-title">
+                                <span class="category-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </span>
+                                <h2>Projets de Stage</h2>
+                            </div>
+                            <div class="header-line"></div>
+                        </div>
+                        
+                        <div class="projects-grid">
+                            <!-- Internship Project 1 -->
+                            <div class="project-card" data-delay="0">
+                                <div class="project-image">
+                                    <img src="assets/images/projects/arianegroup.png" alt="Stage - Base de données Ariane Group">
+                                    
+                                    <!-- Overlay with info -->
+                                    <div class="image-overlay">
+                                        <h3 class="overlay-title">Stage - Base de données Ariane Group</h3>
+                                        <div class="overlay-technologies">
+                                            <span class="tech-tag">SQL</span>
+                                            <span class="tech-tag">Python</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Stage - Base de données Ariane Group</h3>
+                                    
+                                    <div class="project-divider"></div>
+                                    
+                                    <p class="project-description">
+                                        Conception d'une base de données et d'une interface graphique pour gérer les inserts et l'affichage des tables pour Ariane Group
+                                    </p>
+                                    
+                                    <div class="project-technologies">
+                                        <span class="technology">SQL</span>
+                                        <span class="technology">Python</span>
+                                    </div>
+                                    
+                                    <div class="project-action">
+                                        <span class="private-project">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            Projet privé (code source non disponible)
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="corner-decoration"></div>
+                            </div>
+                            
+                            <!-- Internship Project 2 -->
+                            <div class="project-card" data-delay="100">
+                                <div class="project-image">
+                                    <img src="assets/images/projects/ipharm.png" alt="Stage - Gestion de pharmacie">
+                                    
+                                    <!-- Overlay with info -->
+                                    <div class="image-overlay">
+                                        <h3 class="overlay-title">Stage - Gestion de pharmacie</h3>
+                                        <div class="overlay-technologies">
+                                            <span class="tech-tag">HTML</span>
+                                            <span class="tech-tag">CSS</span>
+                                            <span class="tech-tag">JavaScript</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-content">
+                                    <h3 class="project-title">Stage - Gestion de pharmacie</h3>
+                                    
+                                    <div class="project-divider"></div>
+                                    
+                                    <p class="project-description">
+                                        Création d'une base de données et d'un logiciel de gestion de pharmacie avec interface web responsive
+                                    </p>
+                                    
+                                    <div class="project-technologies">
+                                        <span class="technology">HTML</span>
+                                        <span class="technology">CSS</span>
+                                        <span class="technology">JavaScript</span>
+                                    </div>
+                                    
+                                    <div class="project-action">
+                                        <span class="private-project">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            Projet privé (code source non disponible)
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="corner-decoration"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="animate-fade-in">Vous avez un projet en tête ?</h2>
+                    
+                    <p class="animate-fade-in" data-delay="200">
+                        Je suis toujours ouvert à de nouvelles opportunités et collaborations.
+                        N'hésitez pas à me contacter pour discuter de votre projet.
+                    </p>
+                    
+                    <div class="cta-buttons animate-fade-in" data-delay="400">
+                        <a href="contact.html" class="btn btn-primary">
+                            <span class="btn-text">Contactez-moi</span>
+                            <span class="btn-bg"></span>
+                        </a>
+                        
+                        <a href="https://github.com/axelinho75" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <span class="btn-text">
+                                <svg class="github-btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                Voir mon GitHub
+                            </span>
+                            <span class="btn-bg"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-
-
-    <footer class="footer">
-        <p>© 2024 Mon Portfolio. Tous droits réservés.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Axel Flahaut</span>
+                    <p>Développeur Web & Mobile</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-group">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="parcours.html">Parcours</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                            <li><a href="projects.html">Projets</a></li>
+                            <li><a href="veille.html">Veille</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:axel.flahaut@ecoles-epsi.net">axel.flahaut@ecoles-epsi.net</a></li>
+                            <li><a href="https://www.linkedin.com/in/axel-flahaut-103726235/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/axelinho75" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Axel Flahaut. Tous droits réservés.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/projects.js"></script>
 </body>
 </html>

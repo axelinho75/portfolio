@@ -1,0 +1,159 @@
+/* Dark Mode Styles */
+.dark-mode {
+    --color-gray-50: #111827;
+    --color-gray-100: #1f2937;
+    --color-gray-200: #374151;
+    --color-gray-300: #4b5563;
+    --color-gray-400: #6b7280;
+    --color-gray-500: #9ca3af;
+    --color-gray-600: #d1d5db;
+    --color-gray-700: #e5e7eb;
+    --color-gray-800: #f3f4f6;
+    --color-gray-900: #f9fafb;
+    
+    background-color: var(--color-gray-900);
+    color: var(--color-gray-100);
+  }
+  
+  .dark-mode .site-header {
+    background-color: rgba(31, 41, 55, 0.8);
+    border-bottom: 1px solid var(--color-gray-700);
+  }
+  
+  .dark-mode .nav-links a {
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .nav-links a:hover, 
+  .dark-mode .nav-links a.active {
+    color: var(--color-primary);
+  }
+  
+  .dark-mode .dark-mode-toggle, 
+  .dark-mode .mobile-menu-toggle {
+    background-color: var(--color-gray-800);
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .dark-mode-toggle:hover, 
+  .dark-mode .mobile-menu-toggle:hover {
+    background-color: var(--color-gray-700);
+    color: var(--color-white);
+  }
+  
+  .dark-mode .shape-1 {
+    background: linear-gradient(to bottom right, #1e3a8a, #2563eb);
+    mix-blend-mode: color;
+  }
+  
+  .dark-mode .shape-2 {
+    background: linear-gradient(to bottom right, #4c1d95, #7c3aed);
+    mix-blend-mode: color;
+  }
+  
+  .dark-mode .shape-3 {
+    background: linear-gradient(to bottom right, #065f46, #10b981);
+    mix-blend-mode: color;
+  }
+  
+  .dark-mode .hero-subtitle {
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .hero-description {
+    background-color: rgba(31, 41, 55, 0.8);
+    border: 1px solid var(--color-gray-700);
+  }
+  
+  .dark-mode .hero-description p {
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .btn-secondary {
+    background-color: var(--color-gray-800);
+    color: var(--color-primary);
+    border: 1px solid var(--color-gray-700);
+  }
+  
+  .dark-mode .btn-secondary .btn-bg {
+    background-color: var(--color-gray-700);
+  }
+  
+  .dark-mode .title-text {
+    color: var(--color-white);
+  }
+  
+  .dark-mode .service-card {
+    background-color: var(--color-gray-800);
+    border: 1px solid var(--color-gray-700);
+  }
+  
+  .dark-mode .service-icon {
+    background-color: var(--color-gray-700);
+    color: var(--color-primary);
+  }
+  
+  .dark-mode .service-card h3 {
+    color: var(--color-white);
+  }
+  
+  .dark-mode .service-card p {
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .skills-preview-section {
+    background: linear-gradient(to bottom right, var(--color-gray-800), var(--color-gray-900));
+  }
+  
+  .dark-mode .skills-content {
+    background-color: rgba(31, 41, 55, 0.9);
+  }
+  
+  .dark-mode .skill-icon {
+    background: linear-gradient(to bottom right, var(--color-gray-700), var(--color-gray-900));
+  }
+  
+  .dark-mode .skill-name {
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .cta-section h2 {
+    color: var(--color-white);
+  }
+  
+  .dark-mode .cta-section p {
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .mobile-info h3 {
+    color: var(--color-white);
+  }
+  
+  .dark-mode .mobile-info p {
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .modal-container {
+    background-color: var(--color-gray-800);
+  }
+  
+  .dark-mode .modal-content h2 {
+    color: var(--color-white);
+  }
+  
+  .dark-mode .persona-button {
+    background: linear-gradient(to bottom right, var(--color-gray-800), var(--color-gray-900));
+    border: 1px solid var(--color-gray-700);
+  }
+  
+  .dark-mode .persona-button .title {
+    color: var(--color-white);
+  }
+  
+  .dark-mode .persona-button .description {
+    color: var(--color-gray-300);
+  }
+  
+  .dark-mode .text-button {
+    color: var(--color-gray-400);
+  }

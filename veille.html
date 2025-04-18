@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique | Axel Flahaut</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/veille.css">
+    <!-- GSAP pour les animations avancées -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">Axel Flahaut</a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="about.html">À propos</a>
+                    <a href="parcours.html">Parcours</a>
+                    <a href="competences.html">Compétences</a>
+                    <a href="projects.html">Projets</a>
+                    <a href="veille.html" class="active">Veille</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <button class="dark-mode-toggle" aria-label="Basculer le mode sombre">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menu mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Decoration shapes -->
+        <div class="decoration-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        
+        <!-- Hero Section with Parallax -->
+        <section id="veille-hero" class="veille-hero-section">
+            <div class="container hero-container animate-on-scroll">
+                <h1 class="hero-title animate-fade-up">Veille Technologique</h1>
+                
+                <p class="hero-subtitle animate-fade-up" data-delay="200">
+                    Exploration des innovations technologiques dans le secteur pharmaceutique et l'évolution des systèmes d'information en officine.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Introduction with stylized background -->
+        <section id="introduction" class="introduction-section">
+            <div class="container">
+                <div class="intro-card animate-scale-in">
+                    <div class="intro-card-bg"></div>
+                    <div class="intro-card-content">
+                        <h2 class="intro-title">
+                            <span class="intro-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </span>
+                            Pourquoi cette veille ?
+                        </h2>
+                        <p class="intro-text">
+                            Le secteur pharmaceutique connaît une transformation numérique rapide qui révolutionne la façon dont les médicaments sont développés, 
+                            distribués et administrés. Je m'intéresse particulièrement à l'intersection entre l'informatique et la pharmacie, 
+                            un domaine en constante évolution avec des implications majeures pour la santé publique.
+                        </p>
+                        <p class="intro-text">
+                            Cette veille me permet de rester à jour sur les dernières avancées technologiques, d'anticiper les tendances futures 
+                            et de développer une expertise dans un secteur à forte valeur ajoutée.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Focus Areas -->
+        <section id="focus-areas" class="focus-areas-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-text">Domaines d'étude</span>
+                    <span class="title-underline"></span>
+                </h2>
+                
+                <div class="focus-areas-grid">
+                    <!-- Pharmacie numérique -->
+                    <div class="focus-area-card animate-from-bottom" data-delay="0">
+                        <div class="area-bg"></div>
+                        <div class="area-content">
+                            <div class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="area-title">Pharmacie numérique</h3>
+                            <p class="area-description">Étude des logiciels de gestion officinale, des applications de suivi des patients, et des interfaces entre pharmacies et organismes de santé.</p>
+                            <div class="area-border"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Traçabilité médicamenteuse -->
+                    <div class="focus-area-card animate-from-bottom" data-delay="100">
+                        <div class="area-bg"></div>
+                        <div class="area-content">
+                            <div class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="area-title">Traçabilité médicamenteuse</h3>
+                            <p class="area-description">Suivi des technologies de blockchain et RFID pour la lutte contre la contrefaçon et l'amélioration de la sécurité de la chaîne d'approvisionnement.</p>
+                            <div class="area-border"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Intelligence artificielle -->
+                    <div class="focus-area-card animate-from-bottom" data-delay="200">
+                        <div class="area-bg"></div>
+                        <div class="area-content">
+                            <div class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="area-title">Intelligence artificielle</h3>
+                            <p class="area-description">Applications de l'IA dans la découverte de médicaments, l'analyse des interactions médicamenteuses et l'optimisation des traitements personnalisés.</p>
+                            <div class="area-border"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Robotique pharmaceutique -->
+                    <div class="focus-area-card animate-from-bottom" data-delay="300">
+                        <div class="area-bg"></div>
+                        <div class="area-content">
+                            <div class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="area-title">Robotique pharmaceutique</h3>
+                            <p class="area-description">Évolution des robots de préparation et de distribution des médicaments en officine et en milieu hospitalier.</p>
+                            <div class="area-border"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Télépharmacie -->
+                    <div class="focus-area-card animate-from-bottom" data-delay="400">
+                        <div class="area-bg"></div>
+                        <div class="area-content">
+                            <div class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="area-title">Télépharmacie</h3>
+                            <p class="area-description">Évolution des services pharmaceutiques à distance, consultations virtuelles et livraison de médicaments via des plateformes numériques.</p>
+                            <div class="area-border"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Règlementation numérique -->
+                    <div class="focus-area-card animate-from-bottom" data-delay="500">
+                        <div class="area-bg"></div>
+                        <div class="area-content">
+                            <div class="area-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                                </svg>
+                            </div>
+                            
+                            <h3 class="area-title">Règlementation numérique</h3>
+                            <p class="area-description">Suivi des évolutions réglementaires concernant les données de santé, la cybersécurité et les systèmes d'information pharmaceutiques.</p>
+                            <div class="area-border"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Latest Articles with subtle background -->
+        <section id="latest-articles" class="latest-articles-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-text">Dernières publications</span>
+                    <span class="title-underline"></span>
+                </h2>
+                
+                <div class="articles-container">
+                    <!-- Article 1 -->
+                    <div class="article-card animate-from-bottom" data-delay="0">
+                        <div class="article-image">
+                            <div class="image-overlay"></div>
+                            <img src="assets/images/veille/ai-pharma.jpg" alt="L'intelligence artificielle révolutionne la découverte de médicaments">
+                            <div class="article-category">
+                                <span>Intelligence Artificielle</span>
+                            </div>
+                        </div>
+                        
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">15 mars 2025</span>
+                            </div>
+                            
+                            <h3 class="article-title">
+                                L'intelligence artificielle révolutionne la découverte de médicaments
+                            </h3>
+                            
+                            <div class="article-divider"></div>
+                            
+                            <p class="article-summary">
+                                Comment les algorithmes d'apprentissage profond permettent d'accélérer considérablement le processus de recherche et développement pharmaceutique.
+                            </p>
+                            
+                            <a href="#" class="article-link">
+                                Lire l'article
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Article 2 -->
+                    <div class="article-card animate-from-bottom" data-delay="200">
+                        <div class="article-image">
+                            <div class="image-overlay"></div>
+                            <img src="assets/images/veille/blockchain-pharma.jpg" alt="Blockchain et médicaments: vers une traçabilité infaillible">
+                            <div class="article-category">
+                                <span>Blockchain</span>
+                            </div>
+                        </div>
+                        
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">28 février 2025</span>
+                            </div>
+                            
+                            <h3 class="article-title">
+                                Blockchain et médicaments: vers une traçabilité infaillible
+                            </h3>
+                            
+                            <div class="article-divider"></div>
+                            
+                            <p class="article-summary">
+                                Analyse des solutions blockchain pour garantir l'authenticité des médicaments tout au long de la chaîne d'approvisionnement.
+                            </p>
+                            
+                            <a href="#" class="article-link">
+                                Lire l'article
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Article 3 -->
+                    <div class="article-card animate-from-bottom" data-delay="400">
+                        <div class="article-image">
+                            <div class="image-overlay"></div>
+                            <img src="assets/images/veille/robot-pharma.jpg" alt="Robots préparateurs: révolution silencieuse dans les officines">
+                            <div class="article-category">
+                                <span>Robotique</span>
+                            </div>
+                        </div>
+                        
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="article-date">10 février 2025</span>
+                            </div>
+                            
+                            <h3 class="article-title">
+                                Robots préparateurs: révolution silencieuse dans les officines
+                            </h3>
+                            
+                            <div class="article-divider"></div>
+                            
+                            <p class="article-summary">
+                                Les systèmes automatisés de préparation transforment le quotidien des pharmaciens et améliorent la précision des traitements.
+                            </p>
+                            
+                            <a href="#" class="article-link">
+                                Lire l'article
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tech Evolution Timeline -->
+        <section id="evolution-timeline" class="timeline-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-text">Évolution technologique</span>
+                    <span class="title-underline"></span>
+                </h2>
+                
+                <div class="timeline-container">
+                    <!-- Vertical line -->
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Timeline events -->
+                    <div class="timeline-events">
+                        <!-- Event 1 -->
+                        <div class="timeline-event animate-from-side" data-delay="0">
+                            <div class="event-year">
+                                <span>1960s</span>
+                            </div>
+                            
+                            <div class="event-dot"></div>
+                            
+                            <div class="event-content">
+                                <h3 class="event-title">Premiers systèmes informatiques</h3>
+                                <p class="event-description">Introduction des premiers ordinateurs mainframe pour la gestion des stocks pharmaceutiques.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Event 2 -->
+                        <div class="timeline-event animate-from-side" data-delay="200">
+                            <div class="event-year">
+                                <span>1980s</span>
+                            </div>
+                            
+                            <div class="event-dot"></div>
+                            
+                            <div class="event-content">
+                                <h3 class="event-title">Logiciels de gestion d'officine</h3>
+                                <p class="event-description">Développement des premiers logiciels spécialisés pour les pharmacies.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Event 3 -->
+                        <div class="timeline-event animate-from-side" data-delay="400">
+                            <div class="event-year">
+                                <span>1990s</span>
+                            </div>
+                            
+                            <div class="event-dot"></div>
+                            
+                            <div class="event-content">
+                                <h3 class="event-title">Dossier pharmaceutique électronique</h3>
+                                <p class="event-description">Mise en place des premières bases de données patients et des systèmes de prescription électronique.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Event 4 -->
+                        <div class="timeline-event animate-from-side" data-delay="600">
+                            <div class="event-year">
+                                <span>2000s</span>
+                            </div>
+                            
+                            <div class="event-dot"></div>
+                            
+                            <div class="event-content">
+                                <h3 class="event-title">Interconnexion des systèmes</h3>
+                                <p class="event-description">Intégration des systèmes pharmaceutiques avec les assurances et les systèmes de santé.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Event 5 -->
+                        <div class="timeline-event animate-from-side" data-delay="800">
+                            <div class="event-year">
+                                <span>2010s</span>
+                            </div>
+                            
+                            <div class="event-dot"></div>
+                            
+                            <div class="event-content">
+                                <h3 class="event-title">Solutions cloud et mobilité</h3>
+                                <p class="event-description">Transition vers des solutions hébergées dans le cloud et accessibles via des appareils mobiles.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Event 6 -->
+                        <div class="timeline-event animate-from-side" data-delay="1000">
+                            <div class="event-year">
+                                <span>Aujourd'hui</span>
+                            </div>
+                            
+                            <div class="event-dot"></div>
+                            
+                            <div class="event-content">
+                                <h3 class="event-title">IA et analyse prédictive</h3>
+                                <p class="event-description">Utilisation de l'intelligence artificielle pour l'optimisation des stocks, la détection des interactions médicamenteuses et la personnalisation des soins.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter -->
+        <section id="newsletter" class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-card animate-scale-in">
+                    <!-- Decorative background elements -->
+                    <div class="decoration decoration-1"></div>
+                    <div class="decoration decoration-2"></div>
+                    
+                    <div class="newsletter-content">
+                        <div class="newsletter-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        
+                        <h2 class="newsletter-title">Restez informé</h2>
+                        
+                        <p class="newsletter-text">
+                            Recevez ma newsletter mensuelle sur les dernières innovations en informatique pharmaceutique.
+                        </p>
+                        
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Votre adresse email" class="newsletter-input">
+                            <button class="newsletter-button">
+                                S'abonner
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Axel Flahaut</span>
+                    <p>Développeur Web & Mobile</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-group">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="parcours.html">Parcours</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                            <li><a href="projects.html">Projets</a></li>
+                            <li><a href="veille.html">Veille</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:axel.flahaut@ecoles-epsi.net">axel.flahaut@ecoles-epsi.net</a></li>
+                            <li><a href="https://www.linkedin.com/in/axel-flahaut-103726235/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/axelinho75" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Axel Flahaut. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/dark-mode.js"></script>
+    <script src="assets/js/veille.js"></script>
+</body>
+</html>

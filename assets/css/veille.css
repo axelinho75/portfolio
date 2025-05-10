@@ -771,3 +771,22 @@
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
     border-color: var(--color-blue-500);
   }
+
+  /* Méthodologie & Outils */
+.methodology-section {
+  padding: 4rem 0;
+  background-color: var(--color-gray-50);
+}
+.methodology-section .section-title {
+  margin-bottom: 1rem;
+}
+.methodology-list {
+  margin: 1.5rem 0 0 1.5rem;
+  list-style-type: disc;
+  color: var(--color-gray-700);
+}
+.methodology-list li {
+  margin-bottom: 0.75rem;
+}
+
+
